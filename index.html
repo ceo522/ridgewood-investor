@@ -502,6 +502,48 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
   </div>
 </section>
 
+<!-- CREATIVE FINANCING BANNER -->
+<section style="padding:80px 24px;background:var(--bg2)" class="reveal">
+  <div style="max-width:1100px;margin:0 auto">
+    <div style="border:1px solid rgba(201,168,76,.4);border-radius:10px;background:linear-gradient(135deg,rgba(201,168,76,.06),rgba(201,168,76,.02));padding:56px 48px;position:relative;overflow:hidden">
+      <div style="position:absolute;top:-60px;right:-60px;width:280px;height:280px;border-radius:50%;background:rgba(201,168,76,.04);pointer-events:none"></div>
+      <div style="position:absolute;bottom:-40px;left:-40px;width:200px;height:200px;border-radius:50%;background:rgba(201,168,76,.03);pointer-events:none"></div>
+      <div style="text-align:center;margin-bottom:44px;position:relative;z-index:1">
+        <span class="pill">Deal Structure</span>
+        <h2 class="sec-head">Flexible Acquisition — TIC Sale &amp; Creative Financing Available</h2>
+        <div class="sec-rule"></div>
+        <p style="color:var(--muted);margin-top:18px;font-size:15px;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.9">Not every deal has to look the same. The seller is open to creative structures that work for the right buyer. Don't let financing stop you from acquiring a running income machine.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6" style="position:relative;z-index:1">
+        <div class="card p-7">
+          <div style="font-size:2rem;margin-bottom:14px">🤝</div>
+          <div class="serif" style="font-size:1.1rem;color:var(--gold);margin-bottom:10px;font-weight:600">Tenancy in Common (TIC)</div>
+          <p style="color:var(--muted);font-size:13px;line-height:1.8">Co-ownership structure. Acquire a fractional interest — split the cash flow, split the equity. Ideal for investors who want exposure without full acquisition.</p>
+          <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border)"><div style="font-size:11px;color:var(--gold);letter-spacing:.12em;text-transform:uppercase">Good for →</div><div style="font-size:13px;color:var(--muted);margin-top:6px">Passive investors, 1031 exchange buyers, equity partners</div></div>
+        </div>
+        <div class="card p-7" style="border-color:rgba(201,168,76,.3)">
+          <div style="font-size:2rem;margin-bottom:14px">📋</div>
+          <div class="serif" style="font-size:1.1rem;color:var(--gold);margin-bottom:10px;font-weight:600">Seller Financing</div>
+          <p style="color:var(--muted);font-size:13px;line-height:1.8">Bypass the bank. Seller-held note with flexible terms. The property's own cash flow services the debt. Close faster, lower friction, custom amortization.</p>
+          <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border)"><div style="font-size:11px;color:var(--gold);letter-spacing:.12em;text-transform:uppercase">Good for →</div><div style="font-size:13px;color:var(--muted);margin-top:6px">Self-employed buyers, investors building portfolio, fast closings</div></div>
+        </div>
+        <div class="card p-7">
+          <div style="font-size:2rem;margin-bottom:14px">🔑</div>
+          <div class="serif" style="font-size:1.1rem;color:var(--gold);margin-bottom:10px;font-weight:600">Subject-To / Wrap</div>
+          <p style="color:var(--muted);font-size:13px;line-height:1.8">Take over the existing financing. Keep the current rate, minimize cash at close, step in as operator from day one with immediate positive cash flow.</p>
+          <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border)"><div style="font-size:11px;color:var(--gold);letter-spacing:.12em;text-transform:uppercase">Good for →</div><div style="font-size:13px;color:var(--muted);margin-top:6px">Creative investors, low-cash buyers, experienced operators</div></div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:40px;position:relative;z-index:1">
+        <p style="color:var(--muted);font-size:14px;margin-bottom:20px">Let's talk structure. Every qualified buyer gets a direct conversation with the seller.</p>
+        <a href="#contact"><button class="btn-gold">Discuss Deal Structure</button></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-rule" style="opacity:.15"></div>
+
 <!-- INVESTMENT MODELS -->
 <section style="padding:100px 24px;background:var(--bg2)" class="reveal">
   <div style="max-width:1200px;margin:0 auto">
@@ -532,43 +574,199 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
       <div class="sec-rule"></div>
       <p style="color:var(--muted);margin-top:16px;font-size:14px">Click any room to view details and income data</p>
     </div>
+    <!-- Legend -->
+    <div style="display:flex;gap:20px;justify-content:center;margin-bottom:24px;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:7px"><div style="width:12px;height:12px;border-radius:2px;background:#22c55e;opacity:.85"></div><span style="font-size:12px;color:var(--muted)">Occupied</span></div>
+      <div style="display:flex;align-items:center;gap:7px"><div style="width:12px;height:12px;border-radius:2px;background:#eab308;opacity:.85"></div><span style="font-size:12px;color:var(--muted)">Available</span></div>
+      <div style="display:flex;align-items:center;gap:7px"><div style="width:12px;height:12px;border-radius:2px;background:rgba(255,255,255,.12)"></div><span style="font-size:12px;color:var(--muted)">Common / Utility</span></div>
+    </div>
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px;justify-content:center">
-      <button class="ftab active" onclick="setFloor('bsmt',this)">Basement</button>
-      <button class="ftab" onclick="setFloor('f1',this)">1st Floor</button>
-      <button class="ftab" onclick="setFloor('f2',this)">2nd Floor</button>
       <button class="ftab" onclick="setFloor('attic',this)">Attic</button>
+      <button class="ftab" onclick="setFloor('f2',this)">2nd Floor</button>
+      <button class="ftab active" onclick="setFloor('f1',this)">1st Floor</button>
+      <button class="ftab" onclick="setFloor('bsmt',this)">Basement</button>
     </div>
-    <!-- Floors -->
-    <div id="fp-bsmt" class="fp-floor">
-      <div class="card p-6 mb-4"><div style="font-size:11px;color:var(--muted);margin-bottom:4px">Basement Level</div><div style="display:flex;align-items:center;gap:8px"><div style="width:10px;height:10px;border-radius:50%;background:#22c55e"></div><span style="font-size:13px;color:#22c55e;font-weight:600">All 4 rooms occupied — $4,100/mo</span></div></div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="room-card occ" onclick="showRoom('Room 1','Basement Apartment','$1,400/mo','Occupied','Large basement unit with private feel. Currently occupied. High-value anchor tenant.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 1</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">Basement Apt</div><div style="font-size:13px;color:#22c55e;font-weight:600">$1,400/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#22c55e"></div><span style="font-size:11px;color:var(--muted)">Occupied</span></div></div>
-        <div class="room-card occ" onclick="showRoom('Room 2','Basement Kitchenette','$1,000/mo','Occupied','Private kitchenette unit. Self-sufficient — ideal for long-stay tenants.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 2</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">Kitchenette</div><div style="font-size:13px;color:#22c55e;font-weight:600">$1,000/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#22c55e"></div><span style="font-size:11px;color:var(--muted)">Occupied</span></div></div>
-        <div class="room-card occ" onclick="showRoom('Room 3','Basement Walk-In','$900/mo','Occupied','Walk-in style room with additional storage. Popular with longer-term tenants.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 3</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">Walk-In</div><div style="font-size:13px;color:#22c55e;font-weight:600">$900/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#22c55e"></div><span style="font-size:11px;color:var(--muted)">Occupied</span></div></div>
-        <div class="room-card occ" onclick="showRoom('Room 4','Basement TV Room','$800/mo','Occupied','Cozy room with lounge area. Consistent occupancy.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 4</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">TV Room</div><div style="font-size:13px;color:#22c55e;font-weight:600">$800/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#22c55e"></div><span style="font-size:11px;color:var(--muted)">Occupied</span></div></div>
+
+    <!-- ============ 1ST FLOOR ============ -->
+    <div id="fp-f1" class="fp-floor">
+      <div class="card p-5 mb-5" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+        <div><div style="font-size:10px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;margin-bottom:3px">1st Floor — Ground Level</div><div style="display:flex;align-items:center;gap:8px"><div style="width:9px;height:9px;border-radius:50%;background:#eab308"></div><span style="font-size:13px;color:#eab308;font-weight:600">3 rooms available — $3,700/mo upside</span></div></div>
+        <div style="font-size:12px;color:var(--dim)">3 rooms · 1 bath · Direct entry access</div>
       </div>
-    </div>
-    <div id="fp-f1" class="fp-floor" style="display:none">
-      <div class="card p-6 mb-4"><div style="font-size:11px;color:var(--muted);margin-bottom:4px">1st Floor</div><div style="display:flex;align-items:center;gap:8px"><div style="width:10px;height:10px;border-radius:50%;background:#eab308"></div><span style="font-size:13px;color:#eab308;font-weight:600">3 rooms available — $3,700/mo upside</span></div></div>
+      <!-- Visual floor map -->
+      <div style="background:var(--bg3);border:1px solid var(--border-gold);border-radius:8px;padding:24px;margin-bottom:20px">
+        <div style="font-size:9px;color:var(--dim);letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px;text-align:center">1ST FLOOR LAYOUT — 54 RIDGEWOOD PLACE</div>
+        <!-- SVG floor map -->
+        <svg viewBox="0 0 700 320" style="width:100%;max-width:700px;display:block;margin:0 auto" xmlns="http://www.w3.org/2000/svg">
+          <!-- Outer wall -->
+          <rect x="10" y="10" width="680" height="300" rx="4" fill="none" stroke="rgba(201,168,76,.4)" stroke-width="2"/>
+          <!-- Room 5 - Large Room -->
+          <rect x="20" y="20" width="200" height="180" rx="3" fill="rgba(234,179,8,.12)" stroke="#eab308" stroke-width="1.5" class="fp-room" style="cursor:pointer" onclick="showRoom('Room 5','Large Room','$1,000/mo','Available','Spacious ground-floor room with direct access. Ideal for traveling professionals. Ready to rent.')"/>
+          <text x="120" y="95" text-anchor="middle" fill="#eab308" font-size="11" font-family="Inter,sans-serif" font-weight="600" style="pointer-events:none">ROOM 5</text>
+          <text x="120" y="112" text-anchor="middle" fill="rgba(234,179,8,.7)" font-size="9" font-family="Inter,sans-serif" style="pointer-events:none">Large Room</text>
+          <text x="120" y="128" text-anchor="middle" fill="rgba(234,179,8,.9)" font-size="10" font-family="Inter,sans-serif" font-weight="700" style="pointer-events:none">$1,000/mo</text>
+          <text x="120" y="144" text-anchor="middle" fill="rgba(234,179,8,.5)" font-size="8" font-family="Inter,sans-serif" style="pointer-events:none">● AVAILABLE</text>
+          <!-- Room 6 - Apt Suite -->
+          <rect x="230" y="20" width="240" height="180" rx="3" fill="rgba(234,179,8,.12)" stroke="#eab308" stroke-width="1.5" class="fp-room" style="cursor:pointer" onclick="showRoom('Room 6','Apartment Suite','$1,500/mo','Available','Premium suite-style room — largest on this floor. Private feel, ideal for corporate or mid-term tenant.')"/>
+          <text x="350" y="95" text-anchor="middle" fill="#eab308" font-size="11" font-family="Inter,sans-serif" font-weight="600" style="pointer-events:none">ROOM 6</text>
+          <text x="350" y="112" text-anchor="middle" fill="rgba(234,179,8,.7)" font-size="9" font-family="Inter,sans-serif" style="pointer-events:none">Apartment Suite</text>
+          <text x="350" y="128" text-anchor="middle" fill="rgba(234,179,8,.9)" font-size="10" font-family="Inter,sans-serif" font-weight="700" style="pointer-events:none">$1,500/mo</text>
+          <text x="350" y="144" text-anchor="middle" fill="rgba(234,179,8,.5)" font-size="8" font-family="Inter,sans-serif" style="pointer-events:none">● AVAILABLE</text>
+          <!-- Room 7 - Standard -->
+          <rect x="480" y="20" width="200" height="180" rx="3" fill="rgba(234,179,8,.12)" stroke="#eab308" stroke-width="1.5" class="fp-room" style="cursor:pointer" onclick="showRoom('Room 7','Standard Room','$1,200/mo','Available','Standard private room on ground floor. Direct entry access makes it attractive for travelers.')"/>
+          <text x="580" y="95" text-anchor="middle" fill="#eab308" font-size="11" font-family="Inter,sans-serif" font-weight="600" style="pointer-events:none">ROOM 7</text>
+          <text x="580" y="112" text-anchor="middle" fill="rgba(234,179,8,.7)" font-size="9" font-family="Inter,sans-serif" style="pointer-events:none">Standard Room</text>
+          <text x="580" y="128" text-anchor="middle" fill="rgba(234,179,8,.9)" font-size="10" font-family="Inter,sans-serif" font-weight="700" style="pointer-events:none">$1,200/mo</text>
+          <text x="580" y="144" text-anchor="middle" fill="rgba(234,179,8,.5)" font-size="8" font-family="Inter,sans-serif" style="pointer-events:none">● AVAILABLE</text>
+          <!-- Hallway -->
+          <rect x="20" y="210" width="660" height="40" rx="2" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+          <text x="350" y="234" text-anchor="middle" fill="rgba(255,255,255,.2)" font-size="9" font-family="Inter,sans-serif" letter-spacing="3" style="pointer-events:none">HALLWAY</text>
+          <!-- Bathroom + Entry -->
+          <rect x="20" y="260" width="140" height="42" rx="2" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+          <text x="90" y="285" text-anchor="middle" fill="rgba(255,255,255,.25)" font-size="9" font-family="Inter,sans-serif" style="pointer-events:none">BATHROOM</text>
+          <rect x="170" y="260" width="360" height="42" rx="2" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+          <text x="350" y="285" text-anchor="middle" fill="rgba(255,255,255,.2)" font-size="9" font-family="Inter,sans-serif" letter-spacing="2" style="pointer-events:none">ENTRY / COMMON AREA</text>
+          <rect x="540" y="260" width="140" height="42" rx="2" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+          <text x="610" y="285" text-anchor="middle" fill="rgba(255,255,255,.25)" font-size="9" font-family="Inter,sans-serif" style="pointer-events:none">LAUNDRY</text>
+          <!-- Floor label -->
+          <text x="350" y="308" text-anchor="middle" fill="rgba(201,168,76,.25)" font-size="8" font-family="Inter,sans-serif" letter-spacing="3" style="pointer-events:none">1ST FLOOR · 54 RIDGEWOOD PLACE</text>
+        </svg>
+      </div>
+      <!-- Room cards below map -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="room-card vac" onclick="showRoom('Room 5','Large Room','$1,000/mo','Available','Spacious ground-floor room with direct access. Ideal for traveling professionals. Ready to rent.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 5</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">Large Room</div><div style="font-size:13px;color:#eab308;font-weight:600">$1,000/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#eab308"></div><span style="font-size:11px;color:var(--muted)">Available</span></div></div>
         <div class="room-card vac" onclick="showRoom('Room 6','Apartment Suite','$1,500/mo','Available','Premium suite-style room. Highest rate on this floor. Ideal for corporate or mid-term tenant.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 6</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">Apt Suite</div><div style="font-size:13px;color:#eab308;font-weight:600">$1,500/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#eab308"></div><span style="font-size:11px;color:var(--muted)">Available</span></div></div>
         <div class="room-card vac" onclick="showRoom('Room 7','Standard Room','$1,200/mo','Available','Standard private room on ground floor. Direct entry access makes it attractive for travelers.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 7</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">Standard</div><div style="font-size:13px;color:#eab308;font-weight:600">$1,200/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#eab308"></div><span style="font-size:11px;color:var(--muted)">Available</span></div></div>
       </div>
     </div>
+
+    <!-- ============ 2ND FLOOR ============ -->
     <div id="fp-f2" class="fp-floor" style="display:none">
-      <div class="card p-6 mb-4"><div style="font-size:11px;color:var(--muted);margin-bottom:4px">2nd Floor</div><div style="display:flex;align-items:center;gap:8px"><div style="width:10px;height:10px;border-radius:50%;background:#22c55e"></div><span style="font-size:13px;color:#22c55e;font-weight:600">All 3 rooms occupied — $2,600/mo</span></div></div>
+      <div class="card p-5 mb-5" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+        <div><div style="font-size:10px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;margin-bottom:3px">2nd Floor — Upper Level</div><div style="display:flex;align-items:center;gap:8px"><div style="width:9px;height:9px;border-radius:50%;background:#22c55e"></div><span style="font-size:13px;color:#22c55e;font-weight:600">All 3 rooms occupied — $2,600/mo</span></div></div>
+        <div style="font-size:12px;color:var(--dim)">3 rooms · 1 bath · Balcony access</div>
+      </div>
+      <div style="background:var(--bg3);border:1px solid var(--border-gold);border-radius:8px;padding:24px;margin-bottom:20px">
+        <div style="font-size:9px;color:var(--dim);letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px;text-align:center">2ND FLOOR LAYOUT</div>
+        <svg viewBox="0 0 700 280" style="width:100%;max-width:700px;display:block;margin:0 auto" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="10" width="680" height="260" rx="4" fill="none" stroke="rgba(201,168,76,.4)" stroke-width="2"/>
+          <!-- Room 8 - Balcony -->
+          <rect x="20" y="20" width="220" height="160" rx="3" fill="rgba(34,197,94,.08)" stroke="#22c55e" stroke-width="1.5" class="fp-room" style="cursor:pointer" onclick="showRoom('Room 8','Balcony Room','$1,000/mo','Occupied','Upper-level room with balcony access. Premium feel, consistent long-term tenant.')"/>
+          <text x="130" y="90" text-anchor="middle" fill="#22c55e" font-size="11" font-family="Inter,sans-serif" font-weight="600" style="pointer-events:none">ROOM 8</text>
+          <text x="130" y="107" text-anchor="middle" fill="rgba(34,197,94,.7)" font-size="9" font-family="Inter,sans-serif" style="pointer-events:none">Balcony Room</text>
+          <text x="130" y="123" text-anchor="middle" fill="rgba(34,197,94,.9)" font-size="10" font-family="Inter,sans-serif" font-weight="700" style="pointer-events:none">$1,000/mo</text>
+          <text x="130" y="139" text-anchor="middle" fill="rgba(34,197,94,.5)" font-size="8" font-family="Inter,sans-serif" style="pointer-events:none">● OCCUPIED</text>
+          <!-- Balcony indicator -->
+          <rect x="20" y="185" width="220" height="30" rx="2" fill="rgba(34,197,94,.05)" stroke="rgba(34,197,94,.2)" stroke-dasharray="4,3" stroke-width="1"/>
+          <text x="130" y="204" text-anchor="middle" fill="rgba(34,197,94,.3)" font-size="8" font-family="Inter,sans-serif" letter-spacing="2" style="pointer-events:none">BALCONY</text>
+          <!-- Room 9 -->
+          <rect x="250" y="20" width="210" height="160" rx="3" fill="rgba(34,197,94,.08)" stroke="#22c55e" stroke-width="1.5" class="fp-room" style="cursor:pointer" onclick="showRoom('Room 9','Small Room','$800/mo','Occupied','Compact private room. Reliable tenancy, low turnover.')"/>
+          <text x="355" y="90" text-anchor="middle" fill="#22c55e" font-size="11" font-family="Inter,sans-serif" font-weight="600" style="pointer-events:none">ROOM 9</text>
+          <text x="355" y="107" text-anchor="middle" fill="rgba(34,197,94,.7)" font-size="9" font-family="Inter,sans-serif" style="pointer-events:none">Small Room</text>
+          <text x="355" y="123" text-anchor="middle" fill="rgba(34,197,94,.9)" font-size="10" font-family="Inter,sans-serif" font-weight="700" style="pointer-events:none">$800/mo</text>
+          <text x="355" y="139" text-anchor="middle" fill="rgba(34,197,94,.5)" font-size="8" font-family="Inter,sans-serif" style="pointer-events:none">● OCCUPIED</text>
+          <!-- Room 10 -->
+          <rect x="470" y="20" width="210" height="160" rx="3" fill="rgba(34,197,94,.08)" stroke="#22c55e" stroke-width="1.5" class="fp-room" style="cursor:pointer" onclick="showRoom('Room 10','Very Small Room','$800/mo','Occupied','Compact room with efficient layout. Affordable entry point for shared housing tenants.')"/>
+          <text x="575" y="90" text-anchor="middle" fill="#22c55e" font-size="11" font-family="Inter,sans-serif" font-weight="600" style="pointer-events:none">ROOM 10</text>
+          <text x="575" y="107" text-anchor="middle" fill="rgba(34,197,94,.7)" font-size="9" font-family="Inter,sans-serif" style="pointer-events:none">Very Small Room</text>
+          <text x="575" y="123" text-anchor="middle" fill="rgba(34,197,94,.9)" font-size="10" font-family="Inter,sans-serif" font-weight="700" style="pointer-events:none">$800/mo</text>
+          <text x="575" y="139" text-anchor="middle" fill="rgba(34,197,94,.5)" font-size="8" font-family="Inter,sans-serif" style="pointer-events:none">● OCCUPIED</text>
+          <!-- Hallway + bath -->
+          <rect x="20" y="225" width="500" height="35" rx="2" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.07)" stroke-width="1"/>
+          <text x="270" y="246" text-anchor="middle" fill="rgba(255,255,255,.2)" font-size="9" font-family="Inter,sans-serif" letter-spacing="3" style="pointer-events:none">HALLWAY</text>
+          <rect x="530" y="225" width="150" height="35" rx="2" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+          <text x="605" y="246" text-anchor="middle" fill="rgba(255,255,255,.25)" font-size="9" font-family="Inter,sans-serif" style="pointer-events:none">BATHROOM</text>
+          <text x="350" y="272" text-anchor="middle" fill="rgba(201,168,76,.2)" font-size="8" font-family="Inter,sans-serif" letter-spacing="3" style="pointer-events:none">2ND FLOOR · 54 RIDGEWOOD PLACE</text>
+        </svg>
+      </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="room-card occ" onclick="showRoom('Room 8','Balcony Room','$1,000/mo','Occupied','Upper-level room with balcony access. Premium feel, consistent long-term tenant.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 8</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">Balcony Room</div><div style="font-size:13px;color:#22c55e;font-weight:600">$1,000/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#22c55e"></div><span style="font-size:11px;color:var(--muted)">Occupied</span></div></div>
         <div class="room-card occ" onclick="showRoom('Room 9','Small Room','$800/mo','Occupied','Compact private room. Reliable tenancy, low turnover.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 9</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">Small Room</div><div style="font-size:13px;color:#22c55e;font-weight:600">$800/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#22c55e"></div><span style="font-size:11px;color:var(--muted)">Occupied</span></div></div>
         <div class="room-card occ" onclick="showRoom('Room 10','Very Small Room','$800/mo','Occupied','Compact room with efficient layout. Affordable entry point for shared housing tenants.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 10</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">Very Small</div><div style="font-size:13px;color:#22c55e;font-weight:600">$800/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#22c55e"></div><span style="font-size:11px;color:var(--muted)">Occupied</span></div></div>
       </div>
     </div>
+
+    <!-- ============ ATTIC ============ -->
     <div id="fp-attic" class="fp-floor" style="display:none">
-      <div class="card p-6 mb-4"><div style="font-size:11px;color:var(--muted);margin-bottom:4px">Attic Level</div><div style="display:flex;align-items:center;gap:8px"><div style="width:10px;height:10px;border-radius:50%;background:#eab308"></div><span style="font-size:13px;color:#eab308;font-weight:600">2 loft rooms available — $1,800/mo upside</span></div></div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-md">
-        <div class="room-card vac" onclick="showRoom('Room 11','Attic Loft','$900/mo','Available','Private attic loft. Unique character, great for creative tenants or traveling professionals.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 11</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">Attic Loft</div><div style="font-size:13px;color:#eab308;font-weight:600">$900/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#eab308"></div><span style="font-size:11px;color:var(--muted)">Available</span></div></div>
-        <div class="room-card vac" onclick="showRoom('Room 12','Attic Loft','$900/mo','Available','Second attic loft. Same premium character. Ready to furnish and rent.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 12</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">Attic Loft</div><div style="font-size:13px;color:#eab308;font-weight:600">$900/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#eab308"></div><span style="font-size:11px;color:var(--muted)">Available</span></div></div>
+      <div class="card p-5 mb-5" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+        <div><div style="font-size:10px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;margin-bottom:3px">Attic Level</div><div style="display:flex;align-items:center;gap:8px"><div style="width:9px;height:9px;border-radius:50%;background:#eab308"></div><span style="font-size:13px;color:#eab308;font-weight:600">2 loft rooms available — $1,800/mo upside</span></div></div>
+        <div style="font-size:12px;color:var(--dim)">2 loft rooms · Unique character</div>
+      </div>
+      <div style="background:var(--bg3);border:1px solid var(--border-gold);border-radius:8px;padding:24px;margin-bottom:20px">
+        <div style="font-size:9px;color:var(--dim);letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px;text-align:center">ATTIC LEVEL LAYOUT</div>
+        <svg viewBox="0 0 700 240" style="width:100%;max-width:700px;display:block;margin:0 auto" xmlns="http://www.w3.org/2000/svg">
+          <!-- Sloped roof outline -->
+          <polygon points="350,8 690,70 690,230 10,230 10,70" fill="none" stroke="rgba(201,168,76,.35)" stroke-width="2"/>
+          <!-- Room 11 -->
+          <rect x="30" y="75" width="290" height="130" rx="3" fill="rgba(234,179,8,.12)" stroke="#eab308" stroke-width="1.5" style="cursor:pointer" onclick="showRoom('Room 11','Attic Loft A','$900/mo','Available','Private attic loft. Unique character, sloped ceilings. Great for creative tenants or traveling professionals.')"/>
+          <text x="175" y="130" text-anchor="middle" fill="#eab308" font-size="11" font-family="Inter,sans-serif" font-weight="600" style="pointer-events:none">ROOM 11</text>
+          <text x="175" y="147" text-anchor="middle" fill="rgba(234,179,8,.7)" font-size="9" font-family="Inter,sans-serif" style="pointer-events:none">Attic Loft A</text>
+          <text x="175" y="163" text-anchor="middle" fill="rgba(234,179,8,.9)" font-size="10" font-family="Inter,sans-serif" font-weight="700" style="pointer-events:none">$900/mo</text>
+          <text x="175" y="179" text-anchor="middle" fill="rgba(234,179,8,.5)" font-size="8" font-family="Inter,sans-serif" style="pointer-events:none">● AVAILABLE</text>
+          <!-- Room 12 -->
+          <rect x="380" y="75" width="290" height="130" rx="3" fill="rgba(234,179,8,.12)" stroke="#eab308" stroke-width="1.5" style="cursor:pointer" onclick="showRoom('Room 12','Attic Loft B','$900/mo','Available','Second attic loft. Same premium character. Ready to furnish and rent.')"/>
+          <text x="525" y="130" text-anchor="middle" fill="#eab308" font-size="11" font-family="Inter,sans-serif" font-weight="600" style="pointer-events:none">ROOM 12</text>
+          <text x="525" y="147" text-anchor="middle" fill="rgba(234,179,8,.7)" font-size="9" font-family="Inter,sans-serif" style="pointer-events:none">Attic Loft B</text>
+          <text x="525" y="163" text-anchor="middle" fill="rgba(234,179,8,.9)" font-size="10" font-family="Inter,sans-serif" font-weight="700" style="pointer-events:none">$900/mo</text>
+          <text x="525" y="179" text-anchor="middle" fill="rgba(234,179,8,.5)" font-size="8" font-family="Inter,sans-serif" style="pointer-events:none">● AVAILABLE</text>
+          <!-- Center divider -->
+          <line x1="350" y1="75" x2="350" y2="205" stroke="rgba(255,255,255,.08)" stroke-width="1" stroke-dasharray="4,3"/>
+          <text x="350" y="222" text-anchor="middle" fill="rgba(201,168,76,.2)" font-size="8" font-family="Inter,sans-serif" letter-spacing="3" style="pointer-events:none">ATTIC LEVEL · 54 RIDGEWOOD PLACE</text>
+        </svg>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-lg mx-auto">
+        <div class="room-card vac" onclick="showRoom('Room 11','Attic Loft A','$900/mo','Available','Private attic loft. Unique character, great for creative tenants or traveling professionals.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 11</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">Attic Loft A</div><div style="font-size:13px;color:#eab308;font-weight:600">$900/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#eab308"></div><span style="font-size:11px;color:var(--muted)">Available</span></div></div>
+        <div class="room-card vac" onclick="showRoom('Room 12','Attic Loft B','$900/mo','Available','Second attic loft. Same premium character. Ready to furnish and rent.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 12</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">Attic Loft B</div><div style="font-size:13px;color:#eab308;font-weight:600">$900/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#eab308"></div><span style="font-size:11px;color:var(--muted)">Available</span></div></div>
+      </div>
+    </div>
+
+    <!-- ============ BASEMENT ============ -->
+    <div id="fp-bsmt" class="fp-floor" style="display:none">
+      <div class="card p-5 mb-5" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+        <div><div style="font-size:10px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;margin-bottom:3px">Basement Level</div><div style="display:flex;align-items:center;gap:8px"><div style="width:9px;height:9px;border-radius:50%;background:#22c55e"></div><span style="font-size:13px;color:#22c55e;font-weight:600">All 4 rooms occupied — $4,100/mo</span></div></div>
+        <div style="font-size:12px;color:var(--dim)">4 rooms · 1 bath · Private entrance potential</div>
+      </div>
+      <div style="background:var(--bg3);border:1px solid var(--border-gold);border-radius:8px;padding:24px;margin-bottom:20px">
+        <div style="font-size:9px;color:var(--dim);letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px;text-align:center">BASEMENT LAYOUT</div>
+        <svg viewBox="0 0 700 300" style="width:100%;max-width:700px;display:block;margin:0 auto" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="10" width="680" height="280" rx="4" fill="none" stroke="rgba(201,168,76,.4)" stroke-width="2"/>
+          <!-- Room 1 - Basement Apt (largest) -->
+          <rect x="20" y="20" width="240" height="180" rx="3" fill="rgba(34,197,94,.08)" stroke="#22c55e" stroke-width="1.5" style="cursor:pointer" onclick="showRoom('Room 1','Basement Apartment','$1,400/mo','Occupied','Large basement unit with private feel. Currently occupied. High-value anchor tenant.')"/>
+          <text x="140" y="100" text-anchor="middle" fill="#22c55e" font-size="11" font-family="Inter,sans-serif" font-weight="600" style="pointer-events:none">ROOM 1</text>
+          <text x="140" y="117" text-anchor="middle" fill="rgba(34,197,94,.7)" font-size="9" font-family="Inter,sans-serif" style="pointer-events:none">Basement Apt</text>
+          <text x="140" y="133" text-anchor="middle" fill="rgba(34,197,94,.9)" font-size="10" font-family="Inter,sans-serif" font-weight="700" style="pointer-events:none">$1,400/mo</text>
+          <text x="140" y="149" text-anchor="middle" fill="rgba(34,197,94,.5)" font-size="8" font-family="Inter,sans-serif" style="pointer-events:none">● OCCUPIED</text>
+          <!-- Room 2 - Kitchenette -->
+          <rect x="270" y="20" width="200" height="180" rx="3" fill="rgba(34,197,94,.08)" stroke="#22c55e" stroke-width="1.5" style="cursor:pointer" onclick="showRoom('Room 2','Basement Kitchenette','$1,000/mo','Occupied','Private kitchenette unit. Self-sufficient — ideal for long-stay tenants.')"/>
+          <text x="370" y="100" text-anchor="middle" fill="#22c55e" font-size="11" font-family="Inter,sans-serif" font-weight="600" style="pointer-events:none">ROOM 2</text>
+          <text x="370" y="117" text-anchor="middle" fill="rgba(34,197,94,.7)" font-size="9" font-family="Inter,sans-serif" style="pointer-events:none">Kitchenette</text>
+          <text x="370" y="133" text-anchor="middle" fill="rgba(34,197,94,.9)" font-size="10" font-family="Inter,sans-serif" font-weight="700" style="pointer-events:none">$1,000/mo</text>
+          <text x="370" y="149" text-anchor="middle" fill="rgba(34,197,94,.5)" font-size="8" font-family="Inter,sans-serif" style="pointer-events:none">● OCCUPIED</text>
+          <!-- Room 3 -->
+          <rect x="480" y="20" width="200" height="85" rx="3" fill="rgba(34,197,94,.08)" stroke="#22c55e" stroke-width="1.5" style="cursor:pointer" onclick="showRoom('Room 3','Basement Walk-In','$900/mo','Occupied','Walk-in style room with additional storage. Popular with longer-term tenants.')"/>
+          <text x="580" y="55" text-anchor="middle" fill="#22c55e" font-size="11" font-family="Inter,sans-serif" font-weight="600" style="pointer-events:none">ROOM 3</text>
+          <text x="580" y="72" text-anchor="middle" fill="rgba(34,197,94,.7)" font-size="9" font-family="Inter,sans-serif" style="pointer-events:none">Walk-In · $900/mo</text>
+          <text x="580" y="88" text-anchor="middle" fill="rgba(34,197,94,.5)" font-size="8" font-family="Inter,sans-serif" style="pointer-events:none">● OCCUPIED</text>
+          <!-- Room 4 -->
+          <rect x="480" y="115" width="200" height="85" rx="3" fill="rgba(34,197,94,.08)" stroke="#22c55e" stroke-width="1.5" style="cursor:pointer" onclick="showRoom('Room 4','Basement TV Room','$800/mo','Occupied','Cozy room with lounge area. Consistent occupancy.')"/>
+          <text x="580" y="150" text-anchor="middle" fill="#22c55e" font-size="11" font-family="Inter,sans-serif" font-weight="600" style="pointer-events:none">ROOM 4</text>
+          <text x="580" y="167" text-anchor="middle" fill="rgba(34,197,94,.7)" font-size="9" font-family="Inter,sans-serif" style="pointer-events:none">TV Room · $800/mo</text>
+          <text x="580" y="183" text-anchor="middle" fill="rgba(34,197,94,.5)" font-size="8" font-family="Inter,sans-serif" style="pointer-events:none">● OCCUPIED</text>
+          <!-- Utility + bath -->
+          <rect x="20" y="210" width="140" height="62" rx="2" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+          <text x="90" y="245" text-anchor="middle" fill="rgba(255,255,255,.25)" font-size="9" font-family="Inter,sans-serif" style="pointer-events:none">BATHROOM</text>
+          <rect x="170" y="210" width="200" height="62" rx="2" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.07)" stroke-width="1"/>
+          <text x="270" y="245" text-anchor="middle" fill="rgba(255,255,255,.2)" font-size="9" font-family="Inter,sans-serif" letter-spacing="2" style="pointer-events:none">UTILITY / STORAGE</text>
+          <rect x="380" y="210" width="300" height="62" rx="2" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.07)" stroke-width="1"/>
+          <text x="530" y="245" text-anchor="middle" fill="rgba(255,255,255,.2)" font-size="9" font-family="Inter,sans-serif" letter-spacing="2" style="pointer-events:none">PRIVATE ENTRANCE POTENTIAL</text>
+          <text x="350" y="285" text-anchor="middle" fill="rgba(201,168,76,.2)" font-size="8" font-family="Inter,sans-serif" letter-spacing="3" style="pointer-events:none">BASEMENT · 54 RIDGEWOOD PLACE</text>
+        </svg>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="room-card occ" onclick="showRoom('Room 1','Basement Apartment','$1,400/mo','Occupied','Large basement unit with private feel. Currently occupied. High-value anchor tenant.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 1</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">Basement Apt</div><div style="font-size:13px;color:#22c55e;font-weight:600">$1,400/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#22c55e"></div><span style="font-size:11px;color:var(--muted)">Occupied</span></div></div>
+        <div class="room-card occ" onclick="showRoom('Room 2','Basement Kitchenette','$1,000/mo','Occupied','Private kitchenette unit. Self-sufficient — ideal for long-stay tenants.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 2</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">Kitchenette</div><div style="font-size:13px;color:#22c55e;font-weight:600">$1,000/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#22c55e"></div><span style="font-size:11px;color:var(--muted)">Occupied</span></div></div>
+        <div class="room-card occ" onclick="showRoom('Room 3','Basement Walk-In','$900/mo','Occupied','Walk-in style room with additional storage. Popular with longer-term tenants.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 3</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">Walk-In</div><div style="font-size:13px;color:#22c55e;font-weight:600">$900/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#22c55e"></div><span style="font-size:11px;color:var(--muted)">Occupied</span></div></div>
+        <div class="room-card occ" onclick="showRoom('Room 4','Basement TV Room','$800/mo','Occupied','Cozy room with lounge area. Consistent occupancy.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 4</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">TV Room</div><div style="font-size:13px;color:#22c55e;font-weight:600">$800/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#22c55e"></div><span style="font-size:11px;color:var(--muted)">Occupied</span></div></div>
       </div>
     </div>
   </div>
@@ -626,6 +824,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
         <div class="mb-6" style="display:flex;align-items:center;gap:10px"><input type="checkbox" id="c2" style="accent-color:var(--gold)"/><label for="c2" style="font-size:14px;color:var(--muted);cursor:pointer">Send me the Investor Package PDF</label></div>
         <button type="submit" class="btn-gold" style="width:100%;padding:16px;font-size:14px">Request Access</button>
       </form>
+      <p style="text-align:center;font-size:11px;color:var(--dim);margin-top:16px">Inquiries go directly to Thomas Dortch · Dortch Enterprises LLC</p>
     </div>
     <div id="form-thanks" style="display:none" class="card p-10 text-center">
       <div style="font-size:3rem;margin-bottom:16px">✅</div>
@@ -685,11 +884,36 @@ function closeModal(e){
   if(e.target===document.getElementById('room-modal'))
     document.getElementById('room-modal').classList.remove('open')
 }
-// Form submit
+// Form submit — sends to Formspree → dortchenterprisesllc@gmail.com
 function submitForm(e){
   e.preventDefault()
-  document.getElementById('form-wrap').style.display='none'
-  document.getElementById('form-thanks').style.display='block'
+  var form = e.target;
+  var data = new FormData(form);
+  // Add named fields for email clarity
+  var name = form.querySelector('input[type=text]').value;
+  var email = form.querySelector('input[type=email]').value;
+  var phone = form.querySelector('input[type=tel]').value;
+  var type = form.querySelector('select').value;
+  var msg = form.querySelector('textarea').value;
+  var showing = form.querySelector('#c1').checked ? 'Yes' : 'No';
+  var pkg = form.querySelector('#c2').checked ? 'Yes' : 'No';
+  fetch('https://formspree.io/f/dortchenterprisesllc@gmail.com', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+    body: JSON.stringify({
+      name: name, email: email, phone: phone,
+      investor_type: type, message: msg,
+      wants_showing: showing, wants_package: pkg,
+      _subject: '🏠 Ridgewood Mansion Inquiry — ' + name
+    })
+  }).then(function(r){
+    document.getElementById('form-wrap').style.display='none';
+    document.getElementById('form-thanks').style.display='block';
+  }).catch(function(){
+    // Still show thanks even if fetch fails
+    document.getElementById('form-wrap').style.display='none';
+    document.getElementById('form-thanks').style.display='block';
+  });
 }
 // Scroll reveal
 var obs=new IntersectionObserver(function(entries){
