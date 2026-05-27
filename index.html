@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Ridgewood Mansion — Exclusive Investor Opportunity | Springfield, MA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root{
+  --gold:#c9a84c;
+  --gold-light:#e2c67a;
+  --gold-dim:rgba(201,168,76,0.25);
+  --bg:#0a0906;
+  --bg2:#0f0e0b;
+  --bg3:#141210;
+  --text:#f0ede6;
+  --muted:rgba(240,237,230,0.5);
+  --dim:rgba(240,237,230,0.2);
+  --border:rgba(255,255,255,0.06);
+  --border-gold:rgba(201,168,76,0.22);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.serif{font-family:'Playfair Display',Georgia,serif}
+.gold{color:var(--gold)}
+/* grain overlay */
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");opacity:0.018;pointer-events:none;z-index:9999}
+/* Navbar */
+#nav{position:fixed;top:0;width:100%;z-index:500;transition:all .4s;padding:22px 40px;border-bottom:1px solid transparent}
+#nav.scrolled{background:rgba(10,9,6,0.94);backdrop-filter:blur(20px);padding:14px 40px;border-bottom-color:var(--border)}
+.nav-logo{font-family:'Playfair Display',serif;color:var(--gold);font-size:1.05rem;font-weight:700;letter-spacing:.06em;line-height:1.1}
+.nav-sub{font-size:9px;color:var(--dim);letter-spacing:.2em;text-transform:uppercase}
+.nav-link{color:rgba(255,255,255,0.38);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:color .2s}
+.nav-link:hover{color:var(--gold)}
+/* Hero */
+.hero{min-height:100vh;background:var(--bg);display:flex;flex-direction:column;justify-content:center;padding-top:80px;position:relative;overflow:hidden}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.022) 1px,transparent 1px);background-size:80px 80px;animation:gridScroll 30s linear infinite}
+@keyframes gridScroll{to{transform:translateY(80px)}}
+.hero-glow{position:absolute;border-radius:50%;filter:blur(120px);pointer-events:none;animation:orbFloat 12s ease-in-out infinite}
+@keyframes orbFloat{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-30px) scale(1.08)}}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(3.5rem,9vw,7.5rem);font-weight:900;line-height:.95;letter-spacing:-.03em}
+.gold-rule{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.gold-rule-l{height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
+.gold-dot{width:4px;height:4px;border-radius:50%;background:var(--gold);display:inline-block;flex-shrink:0}
+/* Pill */
+.pill{display:inline-block;border:1px solid var(--border-gold);background:rgba(201,168,76,.05);color:var(--gold);font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;padding:5px 18px;border-radius:20px;margin-bottom:20px}
+/* Buttons */
+.btn-gold{background:linear-gradient(135deg,#d4b060,#c9a84c,#b8943a);color:#0a0805;font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:14px 32px;border:none;border-radius:3px;cursor:pointer;font-family:'Inter',sans-serif;transition:all .3s;position:relative;overflow:hidden}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(201,168,76,.35)}
+.btn-outline{border:1px solid rgba(201,168,76,.4);color:var(--gold);background:transparent;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:13px 28px;border-radius:3px;cursor:pointer;font-family:'Inter',sans-serif;transition:all .3s;font-weight:500}
+.btn-outline:hover{background:rgba(201,168,76,.07);border-color:var(--gold);transform:translateY(-2px)}
+/* Stats bar */
+.stats-bar{border:1px solid var(--border-gold);border-radius:4px;background:rgba(8,7,5,.8);backdrop-filter:blur(20px);box-shadow:0 0 60px rgba(201,168,76,.06),inset 0 1px 0 rgba(201,168,76,.08)}
+.stat-cell{padding:18px 24px;text-align:center;border-right:1px solid rgba(255,255,255,.04);flex:1}
+.stat-cell:last-child{border-right:none}
+.stat-num{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--gold);line-height:1}
+.stat-label{font-size:9px;color:var(--dim);letter-spacing:.18em;text-transform:uppercase;margin-top:6px}
+/* Cards */
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:6px;position:relative;overflow:hidden;transition:all .4s cubic-bezier(.16,1,.3,1)}
+.card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(201,168,76,.04) 0%,transparent 60%);opacity:0;transition:opacity .4s}
+.card:hover{border-color:rgba(201,168,76,.3);transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.card:hover::before{opacity:1}
+.card.featured{border-color:rgba(201,168,76,.28)}
+/* Section headings */
+.sec-head{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4vw,3rem);font-weight:700;line-height:1.1}
+.sec-rule{width:48px;height:2px;background:linear-gradient(90deg,var(--gold),transparent);margin:16px auto 0}
+/* Reveal animations */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+/* Walkthrough tabs */
+.wtab{padding:11px 20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap;transition:all .2s;background:none;border-top:none;border-left:none;border-right:none;font-family:'Inter',sans-serif}
+.wtab.active{color:var(--gold);border-bottom-color:var(--gold)}
+.wtab:hover{color:var(--gold-light)}
+/* Real property images */
+.ph-ext{background:url('images/clean-01.png') center/cover no-repeat}
+.ph-entry{background:url('images/tour-01.png') center/cover no-repeat}
+.ph-1st{background:url('images/room-overview.png') center/cover no-repeat}
+.ph-2nd{background:url('images/prop-04-room.png') center/cover no-repeat}
+.ph-bsmt{background:url('images/prop-05-room.png') center/cover no-repeat}
+.ph-bath{background:url('images/prop-06-room.png') center/cover no-repeat}
+.ph-park{background:url('images/prop-03-right.png') center/cover no-repeat}
+.ph-lot{background:url('images/tour-02.png') center/cover no-repeat}
+.ph-label{position:absolute;bottom:0;left:0;right:0;padding:36px 20px 20px;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+/* Floor tabs */
+.ftab{padding:8px 20px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-family:'Inter',sans-serif;font-weight:500;border-radius:3px;cursor:pointer;background:rgba(255,255,255,.04);color:rgba(255,255,255,.4);border:1px solid transparent;transition:all .2s}
+.ftab.active{background:var(--gold);color:#0a0805;font-weight:700}
+.ftab:hover:not(.active){border-color:var(--border-gold);color:var(--gold)}
+/* Room cards */
+.room-card{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:16px;cursor:pointer;transition:all .25s}
+.room-card:hover{border-color:rgba(201,168,76,.4);transform:translateY(-3px) scale(1.01);box-shadow:0 14px 40px rgba(0,0,0,.4)}
+.room-card.occ{border-left:3px solid #22c55e}
+.room-card.vac{border-left:3px solid #eab308}
+/* Modal */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.88);backdrop-filter:blur(8px);z-index:1000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s}
+.modal-overlay.open{opacity:1;pointer-events:all}
+.modal-box{background:#101008;border:1px solid rgba(201,168,76,.3);border-radius:10px;max-width:440px;width:92%;padding:34px;transform:scale(.93) translateY(16px);transition:transform .35s cubic-bezier(.16,1,.3,1);box-shadow:0 40px 100px rgba(0,0,0,.8)}
+.modal-overlay.open .modal-box{transform:scale(1) translateY(0)}
+/* Form */
+.field{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);color:var(--text);border-radius:4px;padding:12px 16px;width:100%;font-family:'Inter',sans-serif;font-size:14px;transition:border-color .2s}
+.field:focus{outline:none;border-color:rgba(201,168,76,.5)}
+.field option{background:#101008}
+.flabel{font-size:10px;color:var(--muted);letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:7px;font-weight:500}
+/* Income badge */
+.ibadge{position:absolute;top:14px;right:14px;background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.35);border-radius:3px;padding:3px 10px;font-size:10px;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+/* Video section */
+.video-container{position:relative;padding-bottom:56.25%;height:0;background:#000}
+.video-container video{position:absolute;top:0;left:0;width:100%;height:100%;display:block}
+/* Luxury divider */
+.lux-div{display:flex;align-items:center;gap:18px;max-width:280px;margin:0 auto}
+.lux-div::before,.lux-div::after{content:'';flex:1;height:1px}
+.lux-div::before{background:linear-gradient(90deg,transparent,rgba(201,168,76,.35))}
+.lux-div::after{background:linear-gradient(90deg,rgba(201,168,76,.35),transparent)}
+/* Highlight band */
+.hband{background:linear-gradient(90deg,rgba(201,168,76,.02),rgba(201,168,76,.06),rgba(201,168,76,.02));border-top:1px solid rgba(201,168,76,.1);border-bottom:1px solid rgba(201,168,76,.1)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:768px){
+  #nav{padding:16px 20px}
+  #nav.scrolled{padding:12px 20px}
+  .hero-title{font-size:clamp(2.8rem,12vw,4rem)!important}
+  .stat-cell{padding:14px 10px}
+  .stat-num{font-size:1.35rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="nav">
+  <div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between">
+    <div>
+      <div class="nav-logo">RIDGEWOOD MANSION</div>
+      <div class="nav-sub">A Dortch Enterprises Property</div>
+    </div>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#tour" class="nav-link">Tour</a>
+      <a href="#video-tour" class="nav-link">Video</a>
+      <a href="#income" class="nav-link">Income</a>
+      <a href="#floorplan" class="nav-link">Floorplan</a>
+      <a href="#contact"><button class="btn-gold" style="padding:10px 22px">Request Access</button></a>
+    </div>
+    <button id="menu-btn" onclick="toggleMenu()" class="md:hidden" style="background:none;border:none;cursor:pointer;color:var(--gold)">
+      <svg width="22" height="16" viewBox="0 0 22 16" fill="none"><path d="M1 1h20M1 8h20M1 15h20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <div id="mobile-menu" style="display:none;background:rgba(10,9,6,.97);border-top:1px solid var(--border);margin-top:12px;padding:8px 0">
+    <a href="#tour" onclick="toggleMenu()" style="display:block;padding:12px 20px;color:var(--muted);font-size:12px;letter-spacing:.12em;text-transform:uppercase">Tour</a>
+    <a href="#video-tour" onclick="toggleMenu()" style="display:block;padding:12px 20px;color:var(--muted);font-size:12px;letter-spacing:.12em;text-transform:uppercase">Video</a>
+    <a href="#income" onclick="toggleMenu()" style="display:block;padding:12px 20px;color:var(--muted);font-size:12px;letter-spacing:.12em;text-transform:uppercase">Income</a>
+    <a href="#floorplan" onclick="toggleMenu()" style="display:block;padding:12px 20px;color:var(--muted);font-size:12px;letter-spacing:.12em;text-transform:uppercase">Floorplan</a>
+    <div style="padding:12px 20px"><a href="#contact" onclick="toggleMenu()"><button class="btn-gold" style="width:100%">Request Access</button></a></div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow" style="width:600px;height:600px;background:rgba(201,168,76,.055);top:-150px;left:-200px;animation-delay:0s"></div>
+  <div class="hero-glow" style="width:450px;height:450px;background:rgba(201,168,76,.04);top:30%;right:-120px;animation-delay:4s"></div>
+  <div class="hero-glow" style="width:350px;height:350px;background:rgba(201,168,76,.025);bottom:10%;left:30%;animation-delay:8s"></div>
+
+  <!-- Corner marks -->
+  <div style="position:absolute;top:92px;left:30px;width:60px;height:60px;border-left:1px solid var(--border-gold);border-top:1px solid var(--border-gold)"></div>
+  <div style="position:absolute;top:92px;right:30px;width:60px;height:60px;border-right:1px solid var(--border-gold);border-top:1px solid var(--border-gold)"></div>
+  <div style="position:absolute;bottom:70px;left:30px;width:60px;height:60px;border-left:1px solid rgba(201,168,76,.1);border-bottom:1px solid rgba(201,168,76,.1)"></div>
+  <div style="position:absolute;bottom:70px;right:30px;width:60px;height:60px;border-right:1px solid rgba(201,168,76,.1);border-bottom:1px solid rgba(201,168,76,.1)"></div>
+
+  <div style="max-width:960px;margin:0 auto;padding:0 24px;text-align:center;position:relative;z-index:10">
+    <div style="opacity:0;animation:fadeUp .8s .2s ease forwards">
+      <span class="pill">Exclusive Investment Opportunity &nbsp;·&nbsp; Springfield, Massachusetts</span>
+    </div>
+    <div style="opacity:0;animation:fadeUp 1s .38s cubic-bezier(.16,1,.3,1) forwards">
+      <div class="hero-title">Ridgewood</div>
+      <div class="hero-title" style="background:linear-gradient(135deg,var(--gold-light),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Mansion</div>
+    </div>
+    <div style="opacity:0;animation:fadeUp .7s .6s ease forwards;margin:22px auto 26px">
+      <div class="lux-div">
+        <span style="font-size:10px;color:rgba(201,168,76,.5);letter-spacing:.22em;text-transform:uppercase;white-space:nowrap">54 Ridgewood Place &nbsp;·&nbsp; Springfield, MA 01105</span>
+      </div>
+    </div>
+    <div style="opacity:0;animation:fadeUp .8s .75s ease forwards">
+      <p style="color:var(--muted);font-size:1.05rem;max-width:560px;margin:0 auto 44px;line-height:1.85;font-weight:300">
+        A 3-story Victorian income property generating <span style="color:var(--gold);font-weight:500">$7,900/mo</span> today with a clear path to <span style="color:var(--gold);font-weight:500">$12,200/mo</span>. 12 rooms. 6 baths. Private parking. Adjacent expansion lot.
+      </p>
+    </div>
+    <div style="opacity:0;animation:fadeUp .8s .9s ease forwards" class="flex flex-wrap gap-3 justify-center mb-16">
+      <a href="#tour"><button class="btn-gold">Begin Tour</button></a>
+      <a href="#video-tour"><button class="btn-outline">Watch Video</button></a>
+      <a href="#contact"><button class="btn-outline">Request Showing</button></a>
+      <a href="#contact"><button class="btn-outline">Contact Seller</button></a>
+    </div>
+    <div style="opacity:0;animation:fadeUp .8s 1.05s ease forwards">
+      <div class="stats-bar flex flex-wrap">
+        <div class="stat-cell"><div class="stat-num">12</div><div class="stat-label">Rooms</div></div>
+        <div class="stat-cell"><div class="stat-num">$7,900</div><div class="stat-label">Current / Mo</div></div>
+        <div class="stat-cell" style="background:rgba(201,168,76,.04)"><div class="stat-num" style="color:var(--gold-light)">$12,200</div><div class="stat-label" style="color:rgba(201,168,76,.5)">Full Potential</div></div>
+        <div class="stat-cell"><div class="stat-num">$4,300</div><div class="stat-label">Upside / Mo</div></div>
+        <div class="stat-cell"><div class="stat-num">6</div><div class="stat-label">Bathrooms</div></div>
+        <div class="stat-cell"><div class="stat-num">3</div><div class="stat-label">Floors</div></div>
+      </div>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(transparent,var(--bg));pointer-events:none"></div>
+  <div style="position:absolute;bottom:28px;left:50%;transform:translateX(-50%);text-align:center">
+    <div style="font-size:9px;color:var(--dim);letter-spacing:.22em;text-transform:uppercase;margin-bottom:10px">Explore</div>
+    <div style="width:1px;height:40px;background:linear-gradient(var(--gold),transparent);margin:0 auto;animation:pulse 2.5s ease-in-out infinite"></div>
+  </div>
+</section>
+<style>@keyframes pulse{0%,100%{opacity:.3}50%{opacity:.9}}</style>
+
+<!-- INVESTMENT SNAPSHOT -->
+<section style="background:var(--bg2);padding:100px 24px" class="reveal">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:60px">
+      <span class="pill">The Numbers</span>
+      <h2 class="sec-head">Investment Snapshot</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+      <div class="card p-7 reveal d1"><div style="font-size:10px;color:var(--muted);letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px">Current Revenue</div><div class="serif" style="font-size:2.3rem;color:var(--gold);font-weight:700;line-height:1">$7,900</div><div style="font-size:12px;color:var(--dim);margin-top:5px">per month</div></div>
+      <div class="card p-7 reveal d2"><div style="font-size:10px;color:var(--muted);letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px">Full Potential</div><div class="serif" style="font-size:2.3rem;color:var(--gold);font-weight:700;line-height:1">$12,200</div><div style="font-size:12px;color:var(--dim);margin-top:5px">per month</div></div>
+      <div class="card featured p-7 reveal d3"><div style="font-size:10px;color:var(--gold);letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px">Upside Available</div><div class="serif" style="font-size:2.3rem;color:var(--gold-light);font-weight:700;line-height:1">$4,300</div><div style="font-size:12px;color:rgba(201,168,76,.4);margin-top:5px">left on the table/mo</div></div>
+      <div class="card p-7 reveal d4"><div style="font-size:10px;color:var(--muted);letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px">Occupancy</div><div class="serif" style="font-size:2.3rem;color:var(--gold);font-weight:700;line-height:1">8 / 12</div><div style="font-size:12px;color:var(--dim);margin-top:5px">rooms occupied</div></div>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 reveal d2">
+      <div class="card p-6 text-center"><div style="font-size:1.8rem;margin-bottom:6px">🏠</div><div class="serif" style="font-size:1.5rem;color:var(--gold);font-weight:600">12</div><div style="font-size:11px;color:var(--dim);margin-top:3px">Income Rooms</div></div>
+      <div class="card p-6 text-center"><div style="font-size:1.8rem;margin-bottom:6px">🚿</div><div class="serif" style="font-size:1.5rem;color:var(--gold);font-weight:600">6</div><div style="font-size:11px;color:var(--dim);margin-top:3px">Full Bathrooms</div></div>
+      <div class="card p-6 text-center"><div style="font-size:1.8rem;margin-bottom:6px">🏗️</div><div class="serif" style="font-size:1.5rem;color:var(--gold);font-weight:600">3</div><div style="font-size:11px;color:var(--dim);margin-top:3px">Floors + Attic</div></div>
+      <div class="card p-6 text-center"><div style="font-size:1.8rem;margin-bottom:6px">📈</div><div class="serif" style="font-size:1.5rem;color:var(--gold);font-weight:600">8–10%</div><div style="font-size:11px;color:var(--dim);margin-top:3px">Est. Cap Rate</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-rule" style="opacity:.15"></div>
+
+<!-- VIDEO TOUR -->
+<section id="video-tour" style="padding:100px 24px;background:var(--bg)" class="reveal">
+  <div style="max-width:1100px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:48px">
+      <span class="pill">See It Before You Visit</span>
+      <h2 class="sec-head">Property Video Tour</h2>
+      <div class="sec-rule"></div>
+      <p style="color:var(--muted);margin-top:18px;font-size:15px;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.8">Every room, every floor — narrated for investors. Complete walkthrough with floorplans.</p>
+    </div>
+    <div style="border:1px solid var(--border-gold);border-radius:10px;overflow:hidden;box-shadow:0 0 80px rgba(201,168,76,.1)">
+      <!-- Top bar -->
+      <div style="background:#0a0a08;border-bottom:1px solid var(--border-gold);padding:11px 20px;display:flex;align-items:center;justify-content:space-between">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="width:8px;height:8px;border-radius:50%;background:#3fb950;box-shadow:0 0 6px #3fb950"></div>
+          <span style="font-size:11px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;font-weight:600">Video Tour</span>
+          <span style="font-size:11px;color:var(--muted)">· 54 Ridgewood Place, Springfield MA</span>
+        </div>
+        <a href="media/RIDGEWOOD_VIDEO_AD_FINAL.mp4" download style="font-size:11px;color:var(--gold);text-decoration:none;border:1px solid var(--border-gold);padding:4px 12px;border-radius:3px;letter-spacing:.1em;text-transform:uppercase">↓ Download</a>
+      </div>
+      <!-- Video -->
+      <div class="video-container">
+        <video controls preload="metadata" playsinline poster="images/clean-01.png">
+          <!-- Mobile-optimized version on small screens -->
+          <source media="(max-width:768px)" src="media/RIDGEWOOD_VIDEO_AD_MOBILE_FINAL.mp4" type="video/mp4">
+          <!-- Full desktop ad -->
+          <source src="media/RIDGEWOOD_VIDEO_AD_FINAL.mp4" type="video/mp4">
+          <!-- Walkthrough as fallback -->
+          <source src="media/walkthrough.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <!-- Stats row -->
+    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;justify-content:center">
+      <div style="background:var(--bg2);border:1px solid var(--border-gold);border-radius:6px;padding:12px 24px;text-align:center"><div class="serif" style="font-size:1.3rem;color:var(--gold);font-weight:700">4,188</div><div style="font-size:9px;color:var(--dim);letter-spacing:.15em;text-transform:uppercase;margin-top:3px">Sq Ft</div></div>
+      <div style="background:var(--bg2);border:1px solid var(--border-gold);border-radius:6px;padding:12px 24px;text-align:center"><div class="serif" style="font-size:1.3rem;color:var(--gold);font-weight:700">12</div><div style="font-size:9px;color:var(--dim);letter-spacing:.15em;text-transform:uppercase;margin-top:3px">Rooms</div></div>
+      <div style="background:var(--bg2);border:1px solid var(--border-gold);border-radius:6px;padding:12px 24px;text-align:center"><div class="serif" style="font-size:1.3rem;color:var(--gold);font-weight:700">3</div><div style="font-size:9px;color:var(--dim);letter-spacing:.15em;text-transform:uppercase;margin-top:3px">Floors</div></div>
+      <div style="background:var(--bg2);border:1px solid var(--border-gold);border-radius:6px;padding:12px 24px;text-align:center"><div class="serif" style="font-size:1.3rem;color:var(--gold);font-weight:700">1909</div><div style="font-size:9px;color:var(--dim);letter-spacing:.15em;text-transform:uppercase;margin-top:3px">Built</div></div>
+      <div style="background:var(--bg2);border:1px solid rgba(201,168,76,.4);border-radius:6px;padding:12px 24px;text-align:center"><div class="serif" style="font-size:1.3rem;color:var(--gold-light);font-weight:700">$499,900</div><div style="font-size:9px;color:rgba(201,168,76,.5);letter-spacing:.15em;text-transform:uppercase;margin-top:3px">Asking Price</div></div>
+      <div style="background:var(--bg2);border:1px solid var(--border-gold);border-radius:6px;padding:12px 24px;text-align:center"><div class="serif" style="font-size:1.3rem;color:#3fb950;font-weight:700">73523024</div><div style="font-size:9px;color:var(--dim);letter-spacing:.15em;text-transform:uppercase;margin-top:3px">MLS #</div></div>
+    </div>
+    <div style="text-align:center;margin-top:36px">
+      <a href="#contact"><button class="btn-gold" style="margin-right:12px">Schedule a Showing</button></a>
+      <a href="#tour"><button class="btn-outline">Room-by-Room Walkthrough</button></a>
+    </div>
+  </div>
+</section>
+
+<div class="gold-rule" style="opacity:.15"></div>
+
+<!-- GUIDED WALKTHROUGH -->
+<section id="tour" style="padding:100px 24px;background:var(--bg2)" class="reveal">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:50px">
+      <span class="pill">Virtual Tour</span>
+      <h2 class="sec-head">Property Walkthrough</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div style="display:flex;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:38px;overflow-x:auto">
+      <button class="wtab active" onclick="setWTab(0,this)">Exterior</button>
+      <button class="wtab" onclick="setWTab(1,this)">Entry</button>
+      <button class="wtab" onclick="setWTab(2,this)">1st Floor</button>
+      <button class="wtab" onclick="setWTab(3,this)">2nd Floor</button>
+      <button class="wtab" onclick="setWTab(4,this)">Basement</button>
+      <button class="wtab" onclick="setWTab(5,this)">Bathrooms</button>
+      <button class="wtab" onclick="setWTab(6,this)">Parking</button>
+      <button class="wtab" onclick="setWTab(7,this)">Adjacent Lot</button>
+    </div>
+    <div id="w-panels">
+      <!-- Exterior -->
+      <div class="w-panel">
+        <div class="grid md:grid-cols-2 gap-10 items-start">
+          <div class="ph-ext rounded-lg relative" style="height:380px;overflow:hidden">
+            <div class="ph-label"><div style="font-size:9px;color:rgba(255,255,255,.25);letter-spacing:.2em;text-transform:uppercase">54 Ridgewood Place</div></div>
+            <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.18),rgba(0,0,0,.45));border-radius:inherit"></div>
+            <div class="ibadge">Updated Roof &amp; Electric</div>
+          </div>
+          <div>
+            <div style="font-size:10px;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px">01 / 08</div>
+            <h3 class="serif" style="font-size:1.9rem;margin-bottom:12px">The Exterior</h3>
+            <div class="gold-rule-l" style="width:44px;margin-bottom:20px"></div>
+            <p style="color:var(--muted);line-height:1.85;margin-bottom:22px;font-size:15px">A commanding 3-story Victorian-era mansion with modern infrastructure updates. Updated roof, ample private parking, and an adjacent lot for future expansion. First impressions convey scale, permanence, and income potential — precisely what commands premium room rates.</p>
+            <div class="card p-5">
+              <div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:12px">Key Highlights</div>
+              <ul style="color:var(--muted);font-size:14px;line-height:2.1">
+                <li style="display:flex;align-items:center;gap:10px"><span class="gold-dot"></span>3-story architectural presence</li>
+                <li style="display:flex;align-items:center;gap:10px"><span class="gold-dot"></span>Recently updated roof</li>
+                <li style="display:flex;align-items:center;gap:10px"><span class="gold-dot"></span>Updated electrical system</li>
+                <li style="display:flex;align-items:center;gap:10px"><span class="gold-dot"></span>Private multi-vehicle parking</li>
+                <li style="display:flex;align-items:center;gap:10px"><span class="gold-dot"></span>Adjacent expansion lot included</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Entry -->
+      <div class="w-panel" style="display:none">
+        <div class="grid md:grid-cols-2 gap-10 items-start">
+          <div class="ph-entry rounded-lg relative" style="height:380px;overflow:hidden">
+            <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.1),rgba(0,0,0,.5));border-radius:inherit;z-index:1"></div>
+            <div class="ibadge" style="z-index:2">Grand Entry</div>
+          </div>
+          <div>
+            <div style="font-size:10px;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px">02 / 08</div>
+            <h3 class="serif" style="font-size:1.9rem;margin-bottom:12px">Entry &amp; Common Areas</h3>
+            <div class="gold-rule-l" style="width:44px;margin-bottom:20px"></div>
+            <p style="color:var(--muted);line-height:1.85;margin-bottom:22px;font-size:15px">Grand entry sets the tone for discerning residents. High ceilings, natural light, and architectural character that justify premium room rates and attract quality, longer-term tenants.</p>
+            <div class="card p-5"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:12px">Income Impact</div><ul style="color:var(--muted);font-size:14px;line-height:2.1"><li style="display:flex;align-items:center;gap:10px"><span class="gold-dot"></span>High ceilings justify premium rents</li><li style="display:flex;align-items:center;gap:10px"><span class="gold-dot"></span>Character retains tenants longer</li><li style="display:flex;align-items:center;gap:10px"><span class="gold-dot"></span>Natural light — top tenant priority</li></ul></div>
+          </div>
+        </div>
+      </div>
+      <!-- 1st Floor -->
+      <div class="w-panel" style="display:none">
+        <div class="grid md:grid-cols-2 gap-10 items-start">
+          <div class="ph-1st rounded-lg relative" style="height:380px;overflow:hidden">
+            <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.1),rgba(0,0,0,.5));border-radius:inherit;z-index:1"></div>
+            <div class="ibadge" style="background:rgba(234,179,8,.12);border-color:rgba(234,179,8,.35);color:#eab308;z-index:2">3 Rooms Vacant</div>
+          </div>
+          <div>
+            <div style="font-size:10px;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px">03 / 08</div>
+            <h3 class="serif" style="font-size:1.9rem;margin-bottom:12px">1st Floor — Ground Level</h3>
+            <div class="gold-rule-l" style="width:44px;margin-bottom:20px"></div>
+            <p style="color:var(--muted);line-height:1.85;margin-bottom:22px;font-size:15px">Three private rooms with direct access — ideal for traveling professionals. Currently <span style="color:#eab308;font-weight:500">3 rooms available</span>, representing <strong style="color:var(--gold)">$3,700/mo</strong> in immediate upside.</p>
+            <div class="card p-5"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:12px">Revenue Potential</div><div style="display:flex;justify-content:space-between;margin-bottom:8px"><span style="color:var(--muted);font-size:14px">Room 5 — Large Room</span><span style="color:var(--gold);font-weight:600">$1,000/mo</span></div><div style="display:flex;justify-content:space-between;margin-bottom:8px"><span style="color:var(--muted);font-size:14px">Room 6 — Apt Suite</span><span style="color:var(--gold);font-weight:600">$1,500/mo</span></div><div style="display:flex;justify-content:space-between;margin-bottom:12px"><span style="color:var(--muted);font-size:14px">Room 7 — Standard</span><span style="color:var(--gold);font-weight:600">$1,200/mo</span></div><div class="gold-rule" style="opacity:.2;margin-bottom:12px"></div><div style="display:flex;justify-content:space-between"><span style="color:var(--text);font-weight:600">Floor Total</span><span style="color:var(--gold-light);font-weight:700;font-size:1.05rem">$3,700/mo</span></div></div>
+          </div>
+        </div>
+      </div>
+      <!-- 2nd Floor -->
+      <div class="w-panel" style="display:none">
+        <div class="grid md:grid-cols-2 gap-10 items-start">
+          <div class="ph-2nd rounded-lg relative" style="height:380px;overflow:hidden">
+            <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.1),rgba(0,0,0,.5));border-radius:inherit;z-index:1"></div>
+            <div class="ibadge" style="background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.35);color:#22c55e;z-index:2">Fully Occupied</div>
+          </div>
+          <div>
+            <div style="font-size:10px;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px">04 / 08</div>
+            <h3 class="serif" style="font-size:1.9rem;margin-bottom:12px">2nd Floor — Upper Level</h3>
+            <div class="gold-rule-l" style="width:44px;margin-bottom:20px"></div>
+            <p style="color:var(--muted);line-height:1.85;margin-bottom:22px;font-size:15px">Upper-level rooms with balcony access. Currently <span style="color:#22c55e;font-weight:500">fully occupied</span> generating <strong style="color:var(--gold)">$2,600/mo</strong>. Premium positioning for long-term residents.</p>
+            <div class="card p-5"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:12px">Current Revenue</div><div style="display:flex;justify-content:space-between;margin-bottom:8px"><span style="color:var(--muted);font-size:14px">Room 8 — Balcony Room</span><span style="color:#22c55e;font-weight:600">$1,000/mo ✓</span></div><div style="display:flex;justify-content:space-between;margin-bottom:8px"><span style="color:var(--muted);font-size:14px">Room 9 — Standard</span><span style="color:#22c55e;font-weight:600">$800/mo ✓</span></div><div style="display:flex;justify-content:space-between;margin-bottom:12px"><span style="color:var(--muted);font-size:14px">Room 10 — Compact</span><span style="color:#22c55e;font-weight:600">$800/mo ✓</span></div><div class="gold-rule" style="opacity:.2;margin-bottom:12px"></div><div style="display:flex;justify-content:space-between"><span style="color:var(--text);font-weight:600">Floor Total</span><span style="color:#22c55e;font-weight:700;font-size:1.05rem">$2,600/mo</span></div></div>
+          </div>
+        </div>
+      </div>
+      <!-- Basement -->
+      <div class="w-panel" style="display:none">
+        <div class="grid md:grid-cols-2 gap-10 items-start">
+          <div class="ph-bsmt rounded-lg relative" style="height:380px;overflow:hidden">
+            <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.1),rgba(0,0,0,.5));border-radius:inherit;z-index:1"></div>
+            <div class="ibadge" style="background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.35);color:#22c55e;z-index:2">Fully Occupied</div>
+          </div>
+          <div>
+            <div style="font-size:10px;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px">05 / 08</div>
+            <h3 class="serif" style="font-size:1.9rem;margin-bottom:12px">Basement Income Area</h3>
+            <div class="gold-rule-l" style="width:44px;margin-bottom:20px"></div>
+            <p style="color:var(--muted);line-height:1.85;margin-bottom:22px;font-size:15px">A fully functional income unit with private entrance potential. Currently generating <strong style="color:var(--gold)">$4,100/mo</strong> as 4 separate rooms. Unique value-add asset.</p>
+            <div class="card p-5"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:12px">Current Revenue</div><div style="display:flex;justify-content:space-between;margin-bottom:8px"><span style="color:var(--muted);font-size:14px">Room 1 — Basement Apt</span><span style="color:#22c55e;font-weight:600">$1,400/mo ✓</span></div><div style="display:flex;justify-content:space-between;margin-bottom:8px"><span style="color:var(--muted);font-size:14px">Room 2 — Kitchenette</span><span style="color:#22c55e;font-weight:600">$1,000/mo ✓</span></div><div style="display:flex;justify-content:space-between;margin-bottom:8px"><span style="color:var(--muted);font-size:14px">Room 3 — Walk-In</span><span style="color:#22c55e;font-weight:600">$900/mo ✓</span></div><div style="display:flex;justify-content:space-between;margin-bottom:12px"><span style="color:var(--muted);font-size:14px">Room 4 — TV Room</span><span style="color:#22c55e;font-weight:600">$800/mo ✓</span></div><div class="gold-rule" style="opacity:.2;margin-bottom:12px"></div><div style="display:flex;justify-content:space-between"><span style="color:var(--text);font-weight:600">Floor Total</span><span style="color:#22c55e;font-weight:700;font-size:1.05rem">$4,100/mo</span></div></div>
+          </div>
+        </div>
+      </div>
+      <!-- Bathrooms -->
+      <div class="w-panel" style="display:none">
+        <div class="grid md:grid-cols-2 gap-10 items-start">
+          <div class="ph-bath rounded-lg relative" style="height:380px;overflow:hidden">
+            <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.1),rgba(0,0,0,.5));border-radius:inherit;z-index:1"></div>
+            <div class="ibadge" style="z-index:2">6 Full Baths</div>
+          </div>
+          <div>
+            <div style="font-size:10px;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px">06 / 08</div>
+            <h3 class="serif" style="font-size:1.9rem;margin-bottom:12px">6 Full Bathrooms</h3>
+            <div class="gold-rule-l" style="width:44px;margin-bottom:20px"></div>
+            <p style="color:var(--muted);line-height:1.85;margin-bottom:22px;font-size:15px">6 full bathrooms serving 12 rooms — a key differentiator for shared housing models. Low friction for resident satisfaction and retention. This ratio is what separates premium from budget shared housing.</p>
+            <div class="card p-5"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:12px">Why It Matters</div><ul style="color:var(--muted);font-size:14px;line-height:2.1"><li style="display:flex;align-items:center;gap:10px"><span class="gold-dot"></span>2 rooms per bath ratio</li><li style="display:flex;align-items:center;gap:10px"><span class="gold-dot"></span>Reduces tenant friction</li><li style="display:flex;align-items:center;gap:10px"><span class="gold-dot"></span>Supports traveling professional model</li></ul></div>
+          </div>
+        </div>
+      </div>
+      <!-- Parking -->
+      <div class="w-panel" style="display:none">
+        <div class="grid md:grid-cols-2 gap-10 items-start">
+          <div class="ph-park rounded-lg relative" style="height:380px;overflow:hidden">
+            <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.1),rgba(0,0,0,.5));border-radius:inherit;z-index:1"></div>
+            <div class="ibadge" style="z-index:2">Private Parking</div>
+          </div>
+          <div>
+            <div style="font-size:10px;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px">07 / 08</div>
+            <h3 class="serif" style="font-size:1.9rem;margin-bottom:12px">Private Parking Area</h3>
+            <div class="gold-rule-l" style="width:44px;margin-bottom:20px"></div>
+            <p style="color:var(--muted);line-height:1.85;margin-bottom:22px;font-size:15px">Private off-street parking for multiple vehicles. A premium amenity in Springfield's urban core. Adds significant value for tenants and operational flexibility for the owner.</p>
+            <div class="card p-5"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:12px">Operator Advantage</div><ul style="color:var(--muted);font-size:14px;line-height:2.1"><li style="display:flex;align-items:center;gap:10px"><span class="gold-dot"></span>Commands $50–$100/mo premium per tenant</li><li style="display:flex;align-items:center;gap:10px"><span class="gold-dot"></span>Rare in urban Springfield</li><li style="display:flex;align-items:center;gap:10px"><span class="gold-dot"></span>Traveling nurse model requires parking</li></ul></div>
+          </div>
+        </div>
+      </div>
+      <!-- Adjacent Lot -->
+      <div class="w-panel" style="display:none">
+        <div class="grid md:grid-cols-2 gap-10 items-start">
+          <div class="ph-lot rounded-lg relative" style="height:380px;overflow:hidden">
+            <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.1),rgba(0,0,0,.5));border-radius:inherit;z-index:1"></div>
+            <div class="ibadge" style="z-index:2">Expansion Lot</div>
+          </div>
+          <div>
+            <div style="font-size:10px;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px">08 / 08</div>
+            <h3 class="serif" style="font-size:1.9rem;margin-bottom:12px">Adjacent Expansion Lot</h3>
+            <div class="gold-rule-l" style="width:44px;margin-bottom:20px"></div>
+            <p style="color:var(--muted);line-height:1.85;margin-bottom:22px;font-size:15px">The adjacent lot presents a rare expansion opportunity — ADU construction, additional parking, or future development. A value multiplier that very few comparable properties offer.</p>
+            <div class="card p-5"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:12px">Expansion Options</div><ul style="color:var(--muted);font-size:14px;line-height:2.1"><li style="display:flex;align-items:center;gap:10px"><span class="gold-dot"></span>ADU / accessory dwelling unit</li><li style="display:flex;align-items:center;gap:10px"><span class="gold-dot"></span>Additional parking revenue</li><li style="display:flex;align-items:center;gap:10px"><span class="gold-dot"></span>Future development upside</li></ul></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-rule" style="opacity:.15"></div>
+
+<!-- INCOME OPPORTUNITY -->
+<section id="income" style="padding:100px 24px;background:var(--bg)" class="reveal">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:56px">
+      <span class="pill">Cash Flow Analysis</span>
+      <h2 class="sec-head">Why Ridgewood Mansion Is a Cash Flow Machine</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6 reveal d1">
+      <div class="card featured p-8">
+        <div style="font-size:10px;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;margin-bottom:16px">Standard Shared Housing</div>
+        <div class="serif" style="font-size:2.4rem;color:var(--gold-light);font-weight:700;line-height:1;margin-bottom:6px">$9,600–$12,000</div>
+        <div style="font-size:12px;color:var(--dim);margin-bottom:20px">per month</div>
+        <div class="gold-rule" style="opacity:.2;margin-bottom:18px"></div>
+        <p style="color:var(--muted);font-size:14px;line-height:1.8">12 rooms × $800–$1,000/mo avg. Month-to-month leases. Stable, predictable income with low vacancy risk.</p>
+      </div>
+      <div class="card featured p-8" style="border-color:rgba(201,168,76,.4)">
+        <div style="font-size:10px;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;margin-bottom:16px">Traveling Professional Model</div>
+        <div class="serif" style="font-size:2.4rem;color:var(--gold-light);font-weight:700;line-height:1;margin-bottom:6px">$14,400–$18,000</div>
+        <div style="font-size:12px;color:var(--dim);margin-bottom:20px">per month</div>
+        <div class="gold-rule" style="opacity:.2;margin-bottom:18px"></div>
+        <p style="color:var(--muted);font-size:14px;line-height:1.8">12 rooms × $1,200–$1,500/mo. 30–90 day furnished placements. Traveling nurses, consultants, corporate.</p>
+      </div>
+      <div class="card featured p-8">
+        <div style="font-size:10px;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;margin-bottom:16px">Hybrid Strategy</div>
+        <div class="serif" style="font-size:2.4rem;color:var(--gold-light);font-weight:700;line-height:1;margin-bottom:6px">$11,000–$15,000</div>
+        <div style="font-size:12px;color:var(--dim);margin-bottom:20px">per month</div>
+        <div class="gold-rule" style="opacity:.2;margin-bottom:18px"></div>
+        <p style="color:var(--muted);font-size:14px;line-height:1.8">Mix of long-term + mid-term rentals. Basement for stable income, upper floors for premium placements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROPERTY HIGHLIGHTS -->
+<section class="hband" style="padding:80px 24px" class="reveal">
+  <div style="max-width:1100px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:48px" class="reveal">
+      <span class="pill">Property Features</span>
+      <h2 class="sec-head">Everything an Operator Needs</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-5 reveal d1">
+      <div class="card p-7 text-center"><div style="font-size:2.2rem;margin-bottom:12px">🏠</div><div class="serif" style="font-size:1.1rem;color:var(--gold);margin-bottom:8px;font-weight:600">12 Income Rooms</div><p style="color:var(--muted);font-size:13px;line-height:1.7">Fully rentable rooms across 3 floors plus attic, each with independent income potential.</p></div>
+      <div class="card p-7 text-center"><div style="font-size:2.2rem;margin-bottom:12px">🚿</div><div class="serif" style="font-size:1.1rem;color:var(--gold);margin-bottom:8px;font-weight:600">6 Full Bathrooms</div><p style="color:var(--muted);font-size:13px;line-height:1.7">A 2:1 room-to-bath ratio that supports premium shared housing and reduces tenant friction.</p></div>
+      <div class="card p-7 text-center"><div style="font-size:2.2rem;margin-bottom:12px">🚗</div><div class="serif" style="font-size:1.1rem;color:var(--gold);margin-bottom:8px;font-weight:600">Private Parking</div><p style="color:var(--muted);font-size:13px;line-height:1.7">Off-street parking for multiple vehicles. Rare urban amenity that adds tenant premium.</p></div>
+      <div class="card p-7 text-center"><div style="font-size:2.2rem;margin-bottom:12px">⚡</div><div class="serif" style="font-size:1.1rem;color:var(--gold);margin-bottom:8px;font-weight:600">Updated Electrical</div><p style="color:var(--muted);font-size:13px;line-height:1.7">Modern electrical infrastructure supports high-occupancy residential use without upgrades.</p></div>
+      <div class="card p-7 text-center"><div style="font-size:2.2rem;margin-bottom:12px">🌳</div><div class="serif" style="font-size:1.1rem;color:var(--gold);margin-bottom:8px;font-weight:600">Adjacent Lot</div><p style="color:var(--muted);font-size:13px;line-height:1.7">Expansion lot included. Build an ADU, add parking, or develop for future appreciation.</p></div>
+      <div class="card p-7 text-center"><div style="font-size:2.2rem;margin-bottom:12px">🏗️</div><div class="serif" style="font-size:1.1rem;color:var(--gold);margin-bottom:8px;font-weight:600">3-Floor Layout</div><p style="color:var(--muted);font-size:13px;line-height:1.7">Basement, ground, upper, and attic levels provide natural tiered pricing and housing models.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTMENT MODELS -->
+<section style="padding:100px 24px;background:var(--bg2)" class="reveal">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:56px">
+      <span class="pill">Who Should Buy This</span>
+      <h2 class="sec-head">Investment Models</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 reveal d1">
+      <div class="card p-7"><div style="font-size:1.8rem;margin-bottom:12px">🏡</div><div class="serif" style="font-size:1.1rem;color:var(--gold);margin-bottom:8px;font-weight:600">House Hacker</div><p style="color:var(--muted);font-size:14px;line-height:1.8">Live in one unit, rent the rest. Offset your mortgage entirely — even generate positive cash flow from day one.</p></div>
+      <div class="card p-7"><div style="font-size:1.8rem;margin-bottom:12px">🏢</div><div class="serif" style="font-size:1.1rem;color:var(--gold);margin-bottom:8px;font-weight:600">Workforce Housing Operator</div><p style="color:var(--muted);font-size:14px;line-height:1.8">Contract with regional employers and staffing agencies. Place workers in furnished rooms at $1,200–$1,500/mo.</p></div>
+      <div class="card p-7"><div style="font-size:1.8rem;margin-bottom:12px">🏥</div><div class="serif" style="font-size:1.1rem;color:var(--gold);margin-bottom:8px;font-weight:600">Traveling Nurse Operator</div><p style="color:var(--muted);font-size:14px;line-height:1.8">30–90 day furnished placements for healthcare travelers. Springfield's hospital district makes this highly viable.</p></div>
+      <div class="card p-7"><div style="font-size:1.8rem;margin-bottom:12px">📋</div><div class="serif" style="font-size:1.1rem;color:var(--gold);margin-bottom:8px;font-weight:600">Traditional Landlord</div><p style="color:var(--muted);font-size:14px;line-height:1.8">Long-term room rentals at $800–$1,200/mo. Steady, predictable cash flow with proven tenants already in place.</p></div>
+      <div class="card p-7"><div style="font-size:1.8rem;margin-bottom:12px">🤝</div><div class="serif" style="font-size:1.1rem;color:var(--gold);margin-bottom:8px;font-weight:600">Group Home Operator</div><p style="color:var(--muted);font-size:14px;line-height:1.8">Licensed group home or sober living potential. Government-backed reimbursement rates often exceed market rent.</p></div>
+      <div class="card featured p-7"><div style="font-size:1.8rem;margin-bottom:12px">📈</div><div class="serif" style="font-size:1.1rem;color:var(--gold);margin-bottom:8px;font-weight:600">The Bottom Line</div><p style="color:var(--muted);font-size:14px;line-height:1.8">$499,900 purchase price. $7,900/mo current. $12,200/mo potential. This is not a speculation — it's a running machine with room to grow.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-rule" style="opacity:.15"></div>
+
+<!-- INTERACTIVE FLOORPLAN -->
+<section id="floorplan" style="padding:100px 24px;background:var(--bg)" class="reveal">
+  <div style="max-width:1100px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:50px">
+      <span class="pill">Floor by Floor</span>
+      <h2 class="sec-head">Interactive Floorplan</h2>
+      <div class="sec-rule"></div>
+      <p style="color:var(--muted);margin-top:16px;font-size:14px">Click any room to view details and income data</p>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px;justify-content:center">
+      <button class="ftab active" onclick="setFloor('bsmt',this)">Basement</button>
+      <button class="ftab" onclick="setFloor('f1',this)">1st Floor</button>
+      <button class="ftab" onclick="setFloor('f2',this)">2nd Floor</button>
+      <button class="ftab" onclick="setFloor('attic',this)">Attic</button>
+    </div>
+    <!-- Floors -->
+    <div id="fp-bsmt" class="fp-floor">
+      <div class="card p-6 mb-4"><div style="font-size:11px;color:var(--muted);margin-bottom:4px">Basement Level</div><div style="display:flex;align-items:center;gap:8px"><div style="width:10px;height:10px;border-radius:50%;background:#22c55e"></div><span style="font-size:13px;color:#22c55e;font-weight:600">All 4 rooms occupied — $4,100/mo</span></div></div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="room-card occ" onclick="showRoom('Room 1','Basement Apartment','$1,400/mo','Occupied','Large basement unit with private feel. Currently occupied. High-value anchor tenant.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 1</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">Basement Apt</div><div style="font-size:13px;color:#22c55e;font-weight:600">$1,400/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#22c55e"></div><span style="font-size:11px;color:var(--muted)">Occupied</span></div></div>
+        <div class="room-card occ" onclick="showRoom('Room 2','Basement Kitchenette','$1,000/mo','Occupied','Private kitchenette unit. Self-sufficient — ideal for long-stay tenants.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 2</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">Kitchenette</div><div style="font-size:13px;color:#22c55e;font-weight:600">$1,000/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#22c55e"></div><span style="font-size:11px;color:var(--muted)">Occupied</span></div></div>
+        <div class="room-card occ" onclick="showRoom('Room 3','Basement Walk-In','$900/mo','Occupied','Walk-in style room with additional storage. Popular with longer-term tenants.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 3</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">Walk-In</div><div style="font-size:13px;color:#22c55e;font-weight:600">$900/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#22c55e"></div><span style="font-size:11px;color:var(--muted)">Occupied</span></div></div>
+        <div class="room-card occ" onclick="showRoom('Room 4','Basement TV Room','$800/mo','Occupied','Cozy room with lounge area. Consistent occupancy.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 4</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">TV Room</div><div style="font-size:13px;color:#22c55e;font-weight:600">$800/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#22c55e"></div><span style="font-size:11px;color:var(--muted)">Occupied</span></div></div>
+      </div>
+    </div>
+    <div id="fp-f1" class="fp-floor" style="display:none">
+      <div class="card p-6 mb-4"><div style="font-size:11px;color:var(--muted);margin-bottom:4px">1st Floor</div><div style="display:flex;align-items:center;gap:8px"><div style="width:10px;height:10px;border-radius:50%;background:#eab308"></div><span style="font-size:13px;color:#eab308;font-weight:600">3 rooms available — $3,700/mo upside</span></div></div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="room-card vac" onclick="showRoom('Room 5','Large Room','$1,000/mo','Available','Spacious ground-floor room with direct access. Ideal for traveling professionals. Ready to rent.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 5</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">Large Room</div><div style="font-size:13px;color:#eab308;font-weight:600">$1,000/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#eab308"></div><span style="font-size:11px;color:var(--muted)">Available</span></div></div>
+        <div class="room-card vac" onclick="showRoom('Room 6','Apartment Suite','$1,500/mo','Available','Premium suite-style room. Highest rate on this floor. Ideal for corporate or mid-term tenant.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 6</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">Apt Suite</div><div style="font-size:13px;color:#eab308;font-weight:600">$1,500/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#eab308"></div><span style="font-size:11px;color:var(--muted)">Available</span></div></div>
+        <div class="room-card vac" onclick="showRoom('Room 7','Standard Room','$1,200/mo','Available','Standard private room on ground floor. Direct entry access makes it attractive for travelers.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 7</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">Standard</div><div style="font-size:13px;color:#eab308;font-weight:600">$1,200/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#eab308"></div><span style="font-size:11px;color:var(--muted)">Available</span></div></div>
+      </div>
+    </div>
+    <div id="fp-f2" class="fp-floor" style="display:none">
+      <div class="card p-6 mb-4"><div style="font-size:11px;color:var(--muted);margin-bottom:4px">2nd Floor</div><div style="display:flex;align-items:center;gap:8px"><div style="width:10px;height:10px;border-radius:50%;background:#22c55e"></div><span style="font-size:13px;color:#22c55e;font-weight:600">All 3 rooms occupied — $2,600/mo</span></div></div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="room-card occ" onclick="showRoom('Room 8','Balcony Room','$1,000/mo','Occupied','Upper-level room with balcony access. Premium feel, consistent long-term tenant.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 8</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">Balcony Room</div><div style="font-size:13px;color:#22c55e;font-weight:600">$1,000/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#22c55e"></div><span style="font-size:11px;color:var(--muted)">Occupied</span></div></div>
+        <div class="room-card occ" onclick="showRoom('Room 9','Small Room','$800/mo','Occupied','Compact private room. Reliable tenancy, low turnover.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 9</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">Small Room</div><div style="font-size:13px;color:#22c55e;font-weight:600">$800/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#22c55e"></div><span style="font-size:11px;color:var(--muted)">Occupied</span></div></div>
+        <div class="room-card occ" onclick="showRoom('Room 10','Very Small Room','$800/mo','Occupied','Compact room with efficient layout. Affordable entry point for shared housing tenants.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 10</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">Very Small</div><div style="font-size:13px;color:#22c55e;font-weight:600">$800/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#22c55e"></div><span style="font-size:11px;color:var(--muted)">Occupied</span></div></div>
+      </div>
+    </div>
+    <div id="fp-attic" class="fp-floor" style="display:none">
+      <div class="card p-6 mb-4"><div style="font-size:11px;color:var(--muted);margin-bottom:4px">Attic Level</div><div style="display:flex;align-items:center;gap:8px"><div style="width:10px;height:10px;border-radius:50%;background:#eab308"></div><span style="font-size:13px;color:#eab308;font-weight:600">2 loft rooms available — $1,800/mo upside</span></div></div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-md">
+        <div class="room-card vac" onclick="showRoom('Room 11','Attic Loft','$900/mo','Available','Private attic loft. Unique character, great for creative tenants or traveling professionals.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 11</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">Attic Loft</div><div style="font-size:13px;color:#eab308;font-weight:600">$900/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#eab308"></div><span style="font-size:11px;color:var(--muted)">Available</span></div></div>
+        <div class="room-card vac" onclick="showRoom('Room 12','Attic Loft','$900/mo','Available','Second attic loft. Same premium character. Ready to furnish and rent.')"><div style="font-size:10px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px">Room 12</div><div style="font-weight:600;margin-bottom:4px;font-size:15px">Attic Loft</div><div style="font-size:13px;color:#eab308;font-weight:600">$900/mo</div><div style="margin-top:8px;display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#eab308"></div><span style="font-size:11px;color:var(--muted)">Available</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROOM MODAL -->
+<div class="modal-overlay" id="room-modal" onclick="closeModal(event)">
+  <div class="modal-box">
+    <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:20px">
+      <div><div style="font-size:10px;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;margin-bottom:4px" id="m-label">Room</div><h3 class="serif" style="font-size:1.6rem" id="m-name"></h3></div>
+      <button onclick="document.getElementById('room-modal').classList.remove('open')" style="background:none;border:none;color:var(--muted);cursor:pointer;font-size:20px;padding:4px">✕</button>
+    </div>
+    <div class="gold-rule" style="opacity:.2;margin-bottom:20px"></div>
+    <div style="display:flex;justify-content:space-between;margin-bottom:16px">
+      <span style="color:var(--muted);font-size:14px">Monthly Rate</span>
+      <span style="color:var(--gold);font-weight:700;font-size:1.1rem" id="m-rate"></span>
+    </div>
+    <div style="display:flex;justify-content:space-between;margin-bottom:20px">
+      <span style="color:var(--muted);font-size:14px">Status</span>
+      <span style="font-weight:600;font-size:14px" id="m-status"></span>
+    </div>
+    <p style="color:var(--muted);font-size:14px;line-height:1.8;margin-bottom:24px" id="m-desc"></p>
+    <a href="#contact"><button class="btn-gold" style="width:100%" onclick="document.getElementById('room-modal').classList.remove('open')">Inquire About This Room</button></a>
+  </div>
+</div>
+
+<div class="gold-rule" style="opacity:.15"></div>
+
+<!-- LEAD CAPTURE FORM -->
+<section id="contact" style="padding:100px 24px;background:var(--bg2)" class="reveal">
+  <div style="max-width:620px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:48px">
+      <span class="pill">Get Access</span>
+      <h2 class="sec-head">Request Investor Access</h2>
+      <div class="sec-rule"></div>
+      <p style="color:var(--muted);margin-top:18px;font-size:15px;line-height:1.8">Get the full investor package, schedule a showing, or connect with the seller.</p>
+    </div>
+    <div class="card p-8" id="form-wrap">
+      <form onsubmit="submitForm(event)">
+        <div class="mb-5"><label class="flabel">Full Name *</label><input type="text" class="field" required placeholder="Your full name"/></div>
+        <div class="mb-5"><label class="flabel">Email Address *</label><input type="email" class="field" required placeholder="your@email.com"/></div>
+        <div class="mb-5"><label class="flabel">Phone Number</label><input type="tel" class="field" placeholder="(555) 000-0000"/></div>
+        <div class="mb-5"><label class="flabel">Investor Type</label>
+          <select class="field">
+            <option value="">Select your type...</option>
+            <option>Individual Investor</option>
+            <option>Real Estate Syndicator</option>
+            <option>Family Office</option>
+            <option>Operator / Buyer</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="mb-5"><label class="flabel">Message / Notes</label><textarea class="field" rows="4" placeholder="Questions, timeline, financing status..."></textarea></div>
+        <div class="mb-4" style="display:flex;align-items:center;gap:10px"><input type="checkbox" id="c1" style="accent-color:var(--gold)"/><label for="c1" style="font-size:14px;color:var(--muted);cursor:pointer">I want to schedule a showing</label></div>
+        <div class="mb-6" style="display:flex;align-items:center;gap:10px"><input type="checkbox" id="c2" style="accent-color:var(--gold)"/><label for="c2" style="font-size:14px;color:var(--muted);cursor:pointer">Send me the Investor Package PDF</label></div>
+        <button type="submit" class="btn-gold" style="width:100%;padding:16px;font-size:14px">Request Access</button>
+      </form>
+    </div>
+    <div id="form-thanks" style="display:none" class="card p-10 text-center">
+      <div style="font-size:3rem;margin-bottom:16px">✅</div>
+      <h3 class="serif" style="font-size:1.8rem;color:var(--gold);margin-bottom:12px">Request Received</h3>
+      <p style="color:var(--muted);line-height:1.8">Thank you for your interest in Ridgewood Mansion. We'll be in touch within 24 hours.<br><br><strong style="color:var(--text)">Susan Lyons · HB Real Estate</strong><br><span style="color:var(--gold)">413-374-7226</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:var(--bg);padding:56px 24px 36px;text-align:center">
+  <div class="gold-rule" style="opacity:.2;margin-bottom:40px"></div>
+  <div class="nav-logo" style="font-size:1.2rem;margin-bottom:6px">RIDGEWOOD MANSION</div>
+  <div style="font-size:11px;color:var(--dim);letter-spacing:.18em;text-transform:uppercase;margin-bottom:6px">A Dortch Enterprises Property</div>
+  <div style="font-size:12px;color:var(--dim);margin-bottom:20px">54 Ridgewood Place · Springfield, MA 01105 · MLS# 73523024</div>
+  <div style="font-size:12px;color:var(--dim);margin-bottom:4px">Listing Agent: Susan Lyons · HB Real Estate · <span style="color:var(--gold)">413-374-7226</span></div>
+  <div class="gold-rule" style="opacity:.12;margin:28px auto;max-width:200px"></div>
+  <div style="font-size:11px;color:var(--dim)">© 2026 Dortch Enterprises LLC. All rights reserved.</div>
+</footer>
+
+<script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+<script>
+// Navbar scroll
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60)
+})
+// Mobile menu
+function toggleMenu(){
+  var m=document.getElementById('mobile-menu')
+  m.style.display=m.style.display==='none'?'block':'none'
+}
+// Walkthrough tabs
+function setWTab(idx,el){
+  document.querySelectorAll('.wtab').forEach(t=>t.classList.remove('active'))
+  el.classList.add('active')
+  document.querySelectorAll('.w-panel').forEach((p,i)=>p.style.display=i===idx?'block':'none')
+}
+// Floorplan tabs
+function setFloor(id,el){
+  document.querySelectorAll('.ftab').forEach(t=>t.classList.remove('active'))
+  el.classList.add('active')
+  document.querySelectorAll('.fp-floor').forEach(f=>f.style.display='none')
+  document.getElementById('fp-'+id).style.display='block'
+}
+// Room modal
+function showRoom(label,name,rate,status,desc){
+  document.getElementById('m-label').textContent=label
+  document.getElementById('m-name').textContent=name
+  document.getElementById('m-rate').textContent=rate
+  var st=document.getElementById('m-status')
+  st.textContent=status
+  st.style.color=status==='Occupied'?'#22c55e':'#eab308'
+  document.getElementById('m-desc').textContent=desc
+  document.getElementById('room-modal').classList.add('open')
+}
+function closeModal(e){
+  if(e.target===document.getElementById('room-modal'))
+    document.getElementById('room-modal').classList.remove('open')
+}
+// Form submit
+function submitForm(e){
+  e.preventDefault()
+  document.getElementById('form-wrap').style.display='none'
+  document.getElementById('form-thanks').style.display='block'
+}
+// Scroll reveal
+var obs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible')})
+},{threshold:.12})
+document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)})
+// Smooth scroll for nav links
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var t=document.querySelector(this.getAttribute('href'))
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}
+  })
+})
+</script>
+</body>
+</html>
